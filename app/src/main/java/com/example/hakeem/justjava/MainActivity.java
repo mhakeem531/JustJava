@@ -89,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
     public void increment(View view) {
         if (quantity == 100) {
             Toast.makeText(this, "you cant have  more than 100 coffees", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "you cant have  more than 100 coffees", Toast.LENGTH_LONG).show();
             return;
         }
 
@@ -126,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
         CheckBox whippedOrNot = (CheckBox) findViewById(R.id.whippedCreamCheckBox);
         CheckBox chocolateOrNot = (CheckBox) findViewById(R.id.ChocolateCheckBox);
         if (whippedOrNot.isChecked()) {
-            price = price + (quantity * 1);
+            price = price + (quantity);
         }
         if (chocolateOrNot.isChecked()) {
             price = price + (quantity * 2);
